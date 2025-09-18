@@ -3,13 +3,13 @@ import Header from "../Header/Header";
 
 
 export default function Main() {
-    return(
+    return (
         <div className="flex min-h-screen flex-col">
-            <Header/>
+            <Header />
             <main className="flex-1 container mx-auto p-4">
                 {/* aqui vai o corpo das páginas */}
                 <Outlet /> 
-                </main>
-            </div>
+            </main>
+        </div>
     )
 }

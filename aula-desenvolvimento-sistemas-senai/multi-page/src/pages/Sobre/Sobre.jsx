@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-function Sobre() {
+const Sobre = () => {
   return (
     <>
-      
+
       <h1>Página Sobre</h1>
     </>
   )
