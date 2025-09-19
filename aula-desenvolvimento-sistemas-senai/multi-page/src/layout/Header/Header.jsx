@@ -1,7 +1,13 @@
 import React from 'react'
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 const Header = () => {
+    const {user,logout} = UseAuth()
+    const navigate = useNavigate()
+
+    const handleLogout = ()=>{
+        logout("/")
+    }
     return (
         <header className='flex items-center justify-between p-4 bg-gray-200'>
             <nav className='flex gap-4'>
@@ -17,6 +23,25 @@ const Header = () => {
                 </NavLink>
 
             </nav>
+
+            <div>
+                {
+                    user ? (
+                        <>
+                            <span className='mr-4'>Olá, {user.email}</span>
+                            <button onClick={handleLogout} className='bg-red-500 text=white px-3 py-1 rounded'>
+                                Logout
+                                </button> 
+                        </>
+                    ) : (
+                        <navLink to="/login"
+                        className="bg-blue-600 text-white px-3 py-1 rounded">
+                            Login
+                        </navLink>
+                    )
+                }
+            </div>
+
         </header>
     )
 }
