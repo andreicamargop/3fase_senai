@@ -680,6 +680,84 @@ async function main() {
         },
       ]
     });
+
+    await prisma.prontuario.createMany({
+    data: [
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+      {
+        descricao: "aa",
+        data: new Date("2025-09-19"), 
+        medico_responsavel_id: 1,
+        paciente_id: 1
+    },
+  ]
+  })
+
 }
 
 main()
