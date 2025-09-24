@@ -12,6 +12,7 @@ import Main from './layout/Main/Main';
 import Blog from './pages/Blog/Blog';
 import PostDetail from './pages/Blog/PostDetail';
 import { AuthProvider } from './context/AuthContext';
+import Login from './pages/login/Login';
 
 
 const router = createBrowserRouter([

@@ -2,7 +2,7 @@ import {createContext, userContext,useState} from "react"
 
 const AuthContext = createContext()
 
-export const AuthProvider = ({chilren}) =>{
+export const AuthProvider = ({children}) =>{
     const [user,SetUser] = useState(null)
 
     const login = (email) => {

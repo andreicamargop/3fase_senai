@@ -2,28 +2,28 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient();
 
 async function main() {
-  // await prisma.usuario.createMany({
-  //   data: [
-  //     { nome:"Joao", 
-  //       email: "joao34@email.com", 
-  //       senha: "123",
-  //       cargo: "Médico"
-  //     },
-  //     { nome: "Bianca",
-  //       email: "bianca12@email.com",
-  //       senha:"345",
-  //       cargo: "Dentista"
-  //     },
-  //     {
-  //       nome: "Carlos",
-  //       email: "carlos123@email.com",
-  //       senha: "abc",
-  //       cargo: "Motorista"
-  //     },
-  //   ],
-  // });
+  await prisma.usuario.createMany({
+    data: [
+      { nome:"Joao", 
+        email: "joao34@email.com", 
+        senha: "123",
+        cargo: "Médico"
+      },
+      { nome: "Bianca",
+        email: "bianca12@email.com",
+        senha:"345",
+        cargo: "Dentista"
+      },
+      {
+        nome: "Carlos",
+        email: "carlos123@email.com",
+        senha: "abc",
+        cargo: "Motorista"
+      },
+    ],
+  });
 
-  await prisma.paciente.createMany({
+     await prisma.paciente.createMany({
     data: [
       {
         nome: "João",
@@ -50,28 +50,7 @@ async function main() {
         email: "carlos43@email.com"
       },
     ],
-  }),
-
-    await prisma.consulta.createMany({
-      data: [
-        {
-          motivo: "Dor nas costas",
-          data_consulta: new Date("2023-08-25"),
-          observacoes: "Ibuprofeno 3 vezes ao dia",
-          medico_responsavel_id: 1,
-          paciente_id: 1
-
-        },
-        {
-          motivo: "Dor de cabeça",
-          data_consulta: new Date("2025-10-15"),
-          observacoes: "Não se movimentar",
-          medico_responsavel_id: 1,
-          paciente_id: 1
-        }
-      ],
     }),
-
 
     await prisma.exame.createMany({
       data: [
@@ -96,7 +75,6 @@ async function main() {
         }
       ],
     }),
-
 
     await prisma.consulta.createMany({
       data: [
@@ -679,7 +657,7 @@ async function main() {
           paciente_id: 1
         },
       ]
-    });
+    }),
 
     await prisma.prontuario.createMany({
     data: [
